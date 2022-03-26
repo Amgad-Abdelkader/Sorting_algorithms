@@ -1,0 +1,14 @@
+# This code sorts the matrices via python code
+# input: the matrix desired to be sorted
+# output: the sorted matrix
+def bubble_sort(matrix):
+    n = len(matrix)
+    j = 1
+    while j < n:
+        for i in range(n-1):
+            if matrix[i] > matrix[i+1]:
+                binary = matrix[i]
+                matrix[i] = matrix[i+1]
+                matrix[i+1] = binary
+        n -=1
+    return matrix
