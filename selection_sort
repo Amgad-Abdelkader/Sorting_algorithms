@@ -1,0 +1,15 @@
+def selection_sort(matrix):
+    """This code sorts the matrices via python code
+    input: the matrix desired to be sorted
+    output: the sorted matrix"""
+    n = len(matrix)
+    sorted_matrix = []
+    for i in range(n):
+        minimum = matrix[i]
+        for j in range(i+1,n):
+            if minimum > matrix[j]:
+                binary = minimum
+                minimum = matrix[j]
+                matrix[j] = binary
+        sorted_matrix.append(minimum)
+    return sorted_matrix
